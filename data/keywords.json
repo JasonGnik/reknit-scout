@@ -1,0 +1,26 @@
+{
+  "injury_terms": [
+    "knee injury", "knee pain", "knee surgery", "patellar", "patella", "meniscus", "ACL", "MCL", "ITBS", "IT band", "runner's knee", "patellofemoral",
+    "shoulder injury", "shoulder pain", "rotator cuff", "labrum", "impingement", "frozen shoulder",
+    "low back pain", "lower back pain", "lumbar", "sciatica", "herniated disc", "bulging disc", "SI joint",
+    "hamstring strain", "hamstring pull", "hamstring tear", "hip pain", "hip flexor", "groin strain",
+    "ankle sprain", "ankle injury", "achilles", "plantar fasciitis", "shin splints",
+    "tendinitis", "tendonitis", "tendinopathy", "tennis elbow", "golfer's elbow",
+    "calf strain", "quad strain"
+  ],
+  "intent_terms": [
+    "self-rehab", "rehab at home", "rehabbing at home", "without a PT", "without seeing a PT",
+    "can't afford PT", "can't afford physical therapy", "PT too expensive", "PT is expensive",
+    "between PT visits", "PT discharged me", "after PT", "post-PT",
+    "what should I do", "what exercises", "how do I rehab", "how long until",
+    "is it normal", "still hurting", "won't go away", "been hurting for",
+    "any advice", "looking for advice", "need advice", "tips for"
+  ],
+  "exclusion_terms": [
+    "post-op day", "post op day", "first day post op",
+    "fracture", "fractured", "broken bone", "compound fracture",
+    "lawsuit", "workers comp",
+    "pediatric", "child", "kid", "my son", "my daughter",
+    "pregnant", "pregnancy"
+  ]
+}

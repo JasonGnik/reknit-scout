@@ -1,0 +1,112 @@
+[
+  {
+    "name": "running",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "high",
+    "relevant_patterns": ["knee", "hip", "ankle", "low_back"],
+    "notes": "Strict on self-promo. Default: helpful comment, no mention. Send DM if user asks."
+  },
+  {
+    "name": "runninginjuries",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "med",
+    "relevant_patterns": ["knee", "hip", "ankle", "low_back"],
+    "notes": "Mention OK with disclosure. Read sub rules quarterly."
+  },
+  {
+    "name": "kneeinjuries",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "med",
+    "relevant_patterns": ["knee"]
+  },
+  {
+    "name": "KneePain",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "med",
+    "relevant_patterns": ["knee"]
+  },
+  {
+    "name": "Sciatica",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "low",
+    "relevant_patterns": ["low_back"]
+  },
+  {
+    "name": "lowbackpain",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "med",
+    "relevant_patterns": ["low_back"]
+  },
+  {
+    "name": "RotatorCuff",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "low",
+    "relevant_patterns": ["shoulder"]
+  },
+  {
+    "name": "ShoulderInjury",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "low",
+    "relevant_patterns": ["shoulder"]
+  },
+  {
+    "name": "Tendinitis",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "low",
+    "relevant_patterns": ["shoulder", "knee", "elbow"]
+  },
+  {
+    "name": "AskPhysicalTherapy",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "high",
+    "relevant_patterns": ["knee", "shoulder", "low_back", "hip", "ankle", "elbow"],
+    "notes": "PTs hang out here. Be helpful, NEVER mention app in thread. DM only."
+  },
+  {
+    "name": "orthopedics",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "high",
+    "relevant_patterns": ["knee", "shoulder", "low_back"],
+    "notes": "Clinical sub. Mostly listen + DM."
+  },
+  {
+    "name": "climbharder",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "high",
+    "relevant_patterns": ["shoulder", "elbow"],
+    "notes": "Climbing finger/elbow injuries common. DM-first."
+  },
+  {
+    "name": "weightroom",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "high",
+    "relevant_patterns": ["low_back", "shoulder", "knee"],
+    "notes": "Strict mods. Only engage on injury threads, DM-first."
+  }
+]
