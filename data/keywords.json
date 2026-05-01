@@ -1,26 +1,69 @@
 {
+  "_note": "Empirical Reddit vocabulary — phrases real injured users actually post, not clinical terms. Researched 2026-05 from live Reddit JSON harvest across 25+ subs.",
+
   "injury_terms": [
-    "knee injury", "knee pain", "knee surgery", "patellar", "patella", "meniscus", "ACL", "MCL", "ITBS", "IT band", "runner's knee", "patellofemoral",
-    "shoulder injury", "shoulder pain", "rotator cuff", "labrum", "impingement", "frozen shoulder",
-    "low back pain", "lower back pain", "lumbar", "sciatica", "herniated disc", "bulging disc", "SI joint",
-    "hamstring strain", "hamstring pull", "hamstring tear", "hip pain", "hip flexor", "groin strain",
-    "ankle sprain", "ankle injury", "achilles", "plantar fasciitis", "shin splints",
-    "tendinitis", "tendonitis", "tendinopathy", "tennis elbow", "golfer's elbow",
-    "calf strain", "quad strain"
+    "knee injury", "knee pain", "knee surgery", "knee surgery", "patellar tendonitis", "patellar tendinopathy", "patellar tendinitis", "patellar dislocation", "patellar subluxation", "patellofemoral", "PFPS", "MPFL", "MPFL reconstruction", "patella", "kneecap", "meniscus", "torn meniscus", "ACL", "MCL", "LCL", "PCL", "ITBS", "IT band", "runner's knee", "runners knee", "chondromalacia", "Hoffa's fat pad", "hoffa fat pad", "knee popping", "knee clicking", "knee gives out", "knee buckling", "knee won't extend", "knee locks up", "tweaked my knee", "knee chondromalacia", "medial knee pain", "side of knee pain", "back of knee pain", "thick patellar tendon",
+
+    "shoulder injury", "labrum tear", "torn labrum", "SLAP tear", "rotator cuff tear", "rotator cuff strain", "supraspinatus tear", "partial thickness tear", "shoulder dislocation", "shoulder subluxation", "subluxed shoulder", "shoulder popped out", "shoulder impingement", "subacromial impingement", "frozen shoulder", "adhesive capsulitis", "thawing phase", "AC joint", "AC joint separation", "shoulder instability", "bicep tendinopathy", "biceps tenosynovitis", "Bankart", "Hill-Sachs", "Latarjet", "shoulder squeak", "shoulder clunk", "shoulder clicks", "crunchy shoulder", "can't lift my arm", "can't lift overhead", "can't reach behind my back", "shoulder pops out", "dead arm", "popped during bench", "popped during press",
+
+    "low back pain", "lower back pain", "chronic back pain", "tweaked my back", "threw out my back", "back spasm", "muscle spasm in back", "lumbar", "L4/L5", "L4-L5", "L5/S1", "L5-S1", "herniated disc", "bulging disc", "disc bulge", "disc extrusion", "disc protrusion", "annular fissure", "reherniated", "slipped disc", "sciatica", "sciatic", "shooting down my leg", "shoots down my leg", "radiating pain", "radiculopathy", "lumbar radiculopathy", "pinched nerve", "microdiscectomy", "discectomy", "stenosis", "lateral recess stenosis", "spondylolisthesis", "anterior pelvic tilt", "lordosis", "SI joint", "sacroiliac",
+
+    "hip pain", "hip flexor", "hip flexor tightness", "hip impingement", "FAI", "femoroacetabular", "hip labrum", "hip labral tear", "labral repair", "glute medius", "gluteal tendinopathy", "GTPS", "greater trochanteric", "snapping hip", "hip clicks", "hip pops", "groin pain", "groin strain", "adductor strain", "osteitis pubis", "pubalgia", "piriformis", "piriformis syndrome", "deep glute pain", "rectus femoris irritation", "hip retroversion",
+
+    "ankle sprain", "rolled my ankle", "rolled ankle", "ankle injury", "high ankle sprain", "chronic ankle instability", "wobbly ankle", "ankle gives out", "ankle pops", "achilles", "achilles tendonitis", "achilles tendinopathy", "achilles paratenosis", "achilles stiffness", "peroneal", "peroneal tendon", "posterior tibial tendonitis", "PTT", "limited dorsiflexion", "metatarsalgia", "plantar fasciitis", "shin splints", "fibula tip", "avulsion fracture",
+
+    "elbow tendinitis", "elbow tendonitis", "tendinitis", "tendonitis", "tendinopathy", "tennis elbow", "golfer's elbow", "golfers elbow", "medial epicondylitis", "lateral epicondylitis", "inner elbow pain", "inside of elbow", "outside of elbow", "forearm tendinitis", "common flexor tendon", "distal bicep", "elbow at lockout", "can't straighten my arm", "elbow won't extend", "hurts when I grip",
+
+    "pulled hamstring", "hamstring strain", "hamstring tear", "hamstring pull", "torn hamstring", "proximal hamstring tendinopathy", "PHT", "high hamstring", "hamstring tendinopathy", "hamstring tendinitis", "hamstring deformation", "BAMIC", "Tier 1 strain", "Tier 2 strain", "Grade 2 strain", "Grade 3 strain", "quad strain", "pulled quad", "quad tear", "rectus femoris tear", "quad tendinitis", "calf strain", "calf tear", "felt a pop sprinting"
   ],
+
+  "mechanism_terms": [
+    "felt a pop", "felt it pop", "felt something pop", "felt a snap", "felt it tear", "heard a pop",
+    "tweaked it", "tweaked my", "popped during", "popped on",
+    "won't heal", "won't go away", "still hurting", "ruining my life", "ruined my life",
+    "months of pain", "years of pain", "weeks of pain", "been hurting for", "going on for",
+    "give out", "gives out", "buckles", "wakes me up at night", "can't sleep on it", "can't sleep",
+    "stiff in the morning", "first step pain", "worse in the morning",
+    "hurts when I grip", "hurts when I lift", "hurts going down stairs", "hurts on lockout",
+    "shoots down", "tingling", "numbness", "numb",
+    "after long runs", "after running", "after lifting",
+    "felt a pop deadlifting", "felt a pop benching", "felt a pop squatting", "felt a pop sprinting",
+    "rolled it", "twisted and felt", "fell on outstretched arm",
+    "MRI showed", "MRI shows", "ortho said", "PT said", "physio said", "doctor said"
+  ],
+
   "intent_terms": [
-    "self-rehab", "rehab at home", "rehabbing at home", "without a PT", "without seeing a PT",
-    "can't afford PT", "can't afford physical therapy", "PT too expensive", "PT is expensive",
-    "between PT visits", "PT discharged me", "after PT", "post-PT",
-    "what should I do", "what exercises", "how do I rehab", "how long until",
-    "is it normal", "still hurting", "won't go away", "been hurting for",
-    "any advice", "looking for advice", "need advice", "tips for"
+    "self-rehab", "self-rehabbing", "rehab at home", "rehabbing at home", "rehab on my own", "rehabbing on my own",
+    "without a PT", "without seeing a PT", "no insurance", "can't afford PT", "can't afford physical therapy", "PT too expensive", "PT is expensive",
+    "between PT visits", "PT discharged me", "after PT", "post-PT", "PT didn't help",
+    "what should I do", "what exercises", "how do I rehab", "how do I fix", "how long until",
+    "is it normal", "any advice", "looking for advice", "need advice", "tips for",
+    "please help", "PLEASE HELP", "advice needed", "not sure what to do", "any insight"
   ],
+
   "exclusion_terms": [
-    "post-op day", "post op day", "first day post op",
+    "post-op day", "post op day", "first day post op", "POD ",
     "fracture", "fractured", "broken bone", "compound fracture",
-    "lawsuit", "workers comp",
-    "pediatric", "child", "kid", "my son", "my daughter",
-    "pregnant", "pregnancy"
-  ]
+    "lawsuit", "workers comp", "workers' comp", "lawyer",
+    "pediatric", "child", "my son", "my daughter", "my kid", "my baby",
+    "pregnant", "pregnancy", "postpartum",
+    "Charania", "Fabrice", "Sami", "[Official]", "[Charania]", "[Fabrice]"
+  ],
+
+  "anti_phrases_for_search": {
+    "_note": "These read like injury phrases but yield mostly noise. AVOID using as primary Reddit search terms.",
+    "shoulder pain": "Too generic; surfaces mobility/programming content",
+    "elbow pain": "Too generic in fitness subs",
+    "knee": "Standalone — knee-jerk, knee-deep, knee-high noise",
+    "hip": "Standalone — hip-hop, hipster, hip thrust noise",
+    "ankle": "Standalone — shoes, fashion, ankle bracelets",
+    "back pain": "OK inside r/backpain, noisy elsewhere",
+    "rotator cuff": "Surfaces post-op recovery content not fresh injuries",
+    "epicondylitis": "Clinical term — laypeople use 'tennis elbow' / 'golfer's elbow'",
+    "achilles": "Hits Greek myth, video games, pet names outside running subs",
+    "hip replacement": "Mostly post-surgical seniors, not Scout's audience",
+    "tight hamstrings": "Flexibility complaint, not injury",
+    "hamstring stretch": "Training/programming, not injury",
+    "hamstring exercises": "Training/programming, not injury"
+  }
 }

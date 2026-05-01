@@ -1,29 +1,23 @@
 [
   {
-    "name": "running",
-    "allow_app_mention": false,
-    "requires_disclosure": true,
-    "prefer_dm": true,
-    "mod_strictness": "high",
-    "relevant_patterns": ["knee", "hip", "ankle", "low_back"],
-    "notes": "Strict on self-promo. Default: helpful comment, no mention. Send DM if user asks."
-  },
-  {
-    "name": "runninginjuries",
-    "allow_app_mention": true,
-    "requires_disclosure": true,
-    "prefer_dm": false,
-    "mod_strictness": "med",
-    "relevant_patterns": ["knee", "hip", "ankle", "low_back"],
-    "notes": "Mention OK with disclosure. Read sub rules quarterly."
-  },
-  {
     "name": "kneeinjuries",
     "allow_app_mention": true,
     "requires_disclosure": true,
     "prefer_dm": false,
     "mod_strictness": "med",
-    "relevant_patterns": ["knee"]
+    "relevant_patterns": ["knee"],
+    "signal_quality": "high",
+    "notes": "Highest-quality knee signal. ~14k members, active, mostly help-seeking."
+  },
+  {
+    "name": "Patellofemoral",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "med",
+    "relevant_patterns": ["knee"],
+    "signal_quality": "high",
+    "notes": "Small but pure-signal — runner's knee, PFPS specific."
   },
   {
     "name": "KneePain",
@@ -31,23 +25,38 @@
     "requires_disclosure": true,
     "prefer_dm": false,
     "mod_strictness": "med",
-    "relevant_patterns": ["knee"]
+    "relevant_patterns": ["knee"],
+    "signal_quality": "high"
   },
   {
-    "name": "Sciatica",
-    "allow_app_mention": true,
-    "requires_disclosure": true,
-    "prefer_dm": false,
-    "mod_strictness": "low",
-    "relevant_patterns": ["low_back"]
-  },
-  {
-    "name": "lowbackpain",
+    "name": "runninginjuries",
     "allow_app_mention": true,
     "requires_disclosure": true,
     "prefer_dm": false,
     "mod_strictness": "med",
-    "relevant_patterns": ["low_back"]
+    "relevant_patterns": ["knee", "hip", "ankle", "low_back", "hamstring"],
+    "signal_quality": "very_high",
+    "notes": "Best general injury sub. Mention OK with disclosure. Highest cross-pattern signal."
+  },
+  {
+    "name": "running",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "high",
+    "relevant_patterns": ["knee", "hip", "ankle", "low_back", "hamstring"],
+    "signal_quality": "med",
+    "notes": "Strict on self-promo. Filter for injury keywords; comment helpfully, DM follow-up."
+  },
+  {
+    "name": "ShoulderInjuries",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "med",
+    "relevant_patterns": ["shoulder"],
+    "signal_quality": "very_high",
+    "notes": "Plural — this is the active sub (NOT r/ShoulderInjury). Pre/post-op + fresh injuries."
   },
   {
     "name": "RotatorCuff",
@@ -55,15 +64,19 @@
     "requires_disclosure": true,
     "prefer_dm": false,
     "mod_strictness": "low",
-    "relevant_patterns": ["shoulder"]
+    "relevant_patterns": ["shoulder"],
+    "signal_quality": "med",
+    "notes": "Skews post-surgical recovery. Less fresh-injury content than r/ShoulderInjuries."
   },
   {
-    "name": "ShoulderInjury",
+    "name": "frozenshoulder",
     "allow_app_mention": true,
     "requires_disclosure": true,
     "prefer_dm": false,
     "mod_strictness": "low",
-    "relevant_patterns": ["shoulder"]
+    "relevant_patterns": ["shoulder"],
+    "signal_quality": "high",
+    "notes": "Niche but pure-signal."
   },
   {
     "name": "Tendinitis",
@@ -71,7 +84,88 @@
     "requires_disclosure": true,
     "prefer_dm": false,
     "mod_strictness": "low",
-    "relevant_patterns": ["shoulder", "knee", "elbow"]
+    "relevant_patterns": ["shoulder", "knee", "elbow"],
+    "signal_quality": "high",
+    "notes": "Heavy elbow content (golfer's/tennis), also knee + shoulder."
+  },
+  {
+    "name": "golf",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "high",
+    "relevant_patterns": ["elbow", "low_back", "shoulder"],
+    "signal_quality": "high",
+    "notes": "Underrated honeypot for elbow content (tennis elbow + golfer's elbow). DM-first."
+  },
+  {
+    "name": "tennis",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "high",
+    "relevant_patterns": ["elbow", "shoulder"],
+    "signal_quality": "low",
+    "notes": "Surprisingly weak for tennis elbow — tour gossip dominates. Skip in favor of r/golf."
+  },
+  {
+    "name": "Sciatica",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "low",
+    "relevant_patterns": ["low_back"],
+    "signal_quality": "very_high",
+    "notes": "Huge, very active. High-intent users (often post-MRI)."
+  },
+  {
+    "name": "HerniatedDisc",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "low",
+    "relevant_patterns": ["low_back"],
+    "signal_quality": "high"
+  },
+  {
+    "name": "backpain",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "med",
+    "relevant_patterns": ["low_back"],
+    "signal_quality": "very_high",
+    "notes": "Largest back-pain sub. PRIMARY crawl target — bigger than r/lowbackpain."
+  },
+  {
+    "name": "lowbackpain",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "med",
+    "relevant_patterns": ["low_back"],
+    "signal_quality": "low",
+    "notes": "Lower volume than r/backpain. Deprioritize."
+  },
+  {
+    "name": "Posture",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "low",
+    "relevant_patterns": ["low_back"],
+    "signal_quality": "med",
+    "notes": "APT, lordosis, posture-driven low back."
+  },
+  {
+    "name": "Sprinting",
+    "allow_app_mention": true,
+    "requires_disclosure": true,
+    "prefer_dm": false,
+    "mod_strictness": "low",
+    "relevant_patterns": ["hamstring", "quad"],
+    "signal_quality": "very_high",
+    "notes": "Highest hamstring/quad signal on Reddit. Pulls and tears galore."
   },
   {
     "name": "AskPhysicalTherapy",
@@ -79,7 +173,8 @@
     "requires_disclosure": true,
     "prefer_dm": true,
     "mod_strictness": "high",
-    "relevant_patterns": ["knee", "shoulder", "low_back", "hip", "ankle", "elbow"],
+    "relevant_patterns": ["knee", "shoulder", "low_back", "hip", "ankle", "elbow", "hamstring"],
+    "signal_quality": "high",
     "notes": "PTs hang out here. Be helpful, NEVER mention app in thread. DM only."
   },
   {
@@ -88,8 +183,9 @@
     "requires_disclosure": true,
     "prefer_dm": true,
     "mod_strictness": "high",
-    "relevant_patterns": ["knee", "shoulder", "low_back"],
-    "notes": "Clinical sub. Mostly listen + DM."
+    "relevant_patterns": ["knee", "shoulder", "low_back", "ankle"],
+    "signal_quality": "med",
+    "notes": "X-ray/imaging Q&A. Mostly listen + DM."
   },
   {
     "name": "climbharder",
@@ -98,7 +194,8 @@
     "prefer_dm": true,
     "mod_strictness": "high",
     "relevant_patterns": ["shoulder", "elbow"],
-    "notes": "Climbing finger/elbow injuries common. DM-first."
+    "signal_quality": "high",
+    "notes": "Climbing finger/elbow/shoulder. DM-first."
   },
   {
     "name": "weightroom",
@@ -107,6 +204,56 @@
     "prefer_dm": true,
     "mod_strictness": "high",
     "relevant_patterns": ["low_back", "shoulder", "knee"],
-    "notes": "Strict mods. Only engage on injury threads, DM-first."
+    "signal_quality": "med",
+    "notes": "Strict mods. Engage on injury threads only, DM-first."
+  },
+  {
+    "name": "Powerlifting",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "high",
+    "relevant_patterns": ["low_back", "shoulder", "knee"],
+    "signal_quality": "med",
+    "notes": "Mechanism-rich (felt a pop deadlifting, etc.). Filter for injury keywords."
+  },
+  {
+    "name": "PullupTrainer",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "med",
+    "relevant_patterns": ["elbow", "shoulder"],
+    "signal_quality": "med",
+    "notes": "Elbow tendinopathy from pull-up volume."
+  },
+  {
+    "name": "bjj",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "med",
+    "relevant_patterns": ["shoulder", "elbow", "knee", "hamstring"],
+    "signal_quality": "med",
+    "notes": "AC joint, shoulder dislocations, hyperextended elbows, groin/hip."
+  },
+  {
+    "name": "soccer",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "high",
+    "relevant_patterns": ["hamstring", "quad", "knee", "ankle"],
+    "signal_quality": "low",
+    "notes": "Mostly pro-injury news ([Charania], [Fabrice], [Sami] in title = skip). Real-user injury content rare but exists."
+  },
+  {
+    "name": "triathlon",
+    "allow_app_mention": false,
+    "requires_disclosure": true,
+    "prefer_dm": true,
+    "mod_strictness": "high",
+    "relevant_patterns": ["knee", "hip", "ankle", "low_back"],
+    "signal_quality": "med"
   }
 ]
